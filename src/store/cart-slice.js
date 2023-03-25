@@ -6,6 +6,7 @@ const cartSlice = createSlice({
     initialState : {
         items: [],
         totalQuantity: 0,
+        changed: false
     },
     reducers: {
         replaceCart (state, action) {
@@ -16,6 +17,7 @@ const cartSlice = createSlice({
             const newItem = action.payload;
             const existingItem = state.items.find(item => item.id === newItem.id);
             state.totalQuantity++;
+            state.changed = true;
             if (!existingItem) {
                 // Jika produk belum ada di cart
                 state.items.push({
