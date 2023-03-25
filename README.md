@@ -1,3 +1,3 @@
-# Simple Shopping App
+# Simple Shopping App UI
 
-To practice advanced Redux.
+Using React Redux and Redux Toolkit.
